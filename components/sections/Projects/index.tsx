@@ -1,10 +1,10 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import { featuredProjects } from "@/data/projects";
-import { ProjectCard } from "./ProjectCard";
 import { ProjectModal } from "./ProjectModal";
 import { Project } from "@/types";
+import { ProjectCard } from "./ProjectCard";
 
 export function Projects() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);

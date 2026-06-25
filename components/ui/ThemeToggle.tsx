@@ -2,8 +2,8 @@
 
 import { useTheme } from "next-themes";
 import { useSyncExternalStore } from "react";
+import { FaMoon, FaSun } from "react-icons/fa";
 
-// Função dummy para o snapshot (no cliente)
 const subscribe = () => () => {};
 
 export function ThemeToggle() {
@@ -27,8 +27,10 @@ export function ThemeToggle() {
       className="relative flex h-7 w-14 cursor-pointer items-center rounded-full border border-zinc-700 bg-zinc-900 p-1 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-purple-500/50"
       aria-label="Toggle Theme"
     >
-      <span className="absolute left-1.5 text-xs text-zinc-400">☀️</span>
-      <span className="absolute right-1.5 text-xs text-zinc-400">🌙</span>
+      <span className="absolute left-1.5 text-xs text-amber-300">
+        <FaSun />
+      </span>
+      <span className="absolute right-1.5 text-xs text-zinc-400 "><FaMoon /></span>
 
       <div
         className={`h-5 w-5 rounded-full bg-white shadow-md transition-transform duration-300 ease-in-out ${
