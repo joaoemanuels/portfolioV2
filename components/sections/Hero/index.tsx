@@ -1,10 +1,33 @@
 "use client";
 
-import React from "react";
+import { Download, MoveRight } from "lucide-react";
+import { BsTypescript } from "react-icons/bs";
+import { FaGithub, FaLinkedin, FaReact, FaTwitter } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import { RiTailwindCssFill } from "react-icons/ri";
+
+const socials = [
+  {
+    icon: <FaGithub size={16} />,
+    href: "https://github.com/seuuser",
+    label: "GitHub",
+  },
+  {
+    icon: <FaLinkedin size={16} />,
+    href: "https://linkedin.com/in/seuuser",
+    label: "LinkedIn",
+  },
+  {
+    icon: <FaTwitter size={16} />,
+    href: "https://twitter.com/seuuser",
+    label: "Twitter",
+  },
+  { icon: <MdEmail size={16} />, href: "mailto:seu@email.com", label: "Email" },
+];
 
 export function Hero() {
   return (
-    <div className="relative w-full max-w-7xl mx-auto px-6 py-20 lg:py-32 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center overflow-hidden">
+    <div className="relative w-full max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center overflow-hidden">
       <div className="flex flex-col items-start space-y-6 max-w-xl z-10">
         <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 text-xs font-semibold tracking-wide">
           <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
@@ -36,7 +59,7 @@ export function Hero() {
           >
             Ver Projetos
             <span className="transition-transform duration-200 group-hover:translate-x-1">
-              →
+              <MoveRight />
             </span>
           </a>
 
@@ -46,19 +69,7 @@ export function Hero() {
             className="flex items-center justify-center gap-2 px-6 py-3 rounded-xl border border-zinc-700 bg-zinc-900/50 text-zinc-200 font-medium text-sm transition-all duration-300 hover:bg-zinc-800 hover:border-zinc-600 active:scale-[0.98]"
           >
             Download CV
-            <svg
-              className="h-4 w-4 text-zinc-400"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
-              />
-            </svg>
+            <Download className="h-4 w-4 text-zinc-400" />
           </a>
         </div>
 
@@ -67,15 +78,16 @@ export function Hero() {
             Vamos nos conectar:
           </span>
           <div className="flex gap-3">
-            {["github", "linkedin", "twitter", "mail"].map((social) => (
+            {socials.map(({ icon, href, label }) => (
               <a
-                key={social}
-                href={`#${social}`}
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
                 className="flex h-9 w-9 items-center justify-center rounded-full border border-zinc-800 bg-zinc-900 text-zinc-400 transition-all duration-200 hover:border-zinc-700 hover:text-white hover:bg-zinc-800"
               >
-                <span className="text-xs font-bold capitalize">
-                  {social[0]}
-                </span>
+                {icon}
               </a>
             ))}
           </div>
@@ -116,7 +128,8 @@ export function Hero() {
                 Estúdio Digital Criativo
               </h3>
               <p className="text-[8px] text-zinc-400 max-w-37.5">
-                Desenvolvemos ativos digitais premium e interfaces web personalizadas.
+                Desenvolvemos ativos digitais premium e interfaces web
+                personalizadas.
               </p>
               <div className="h-3 w-12 rounded bg-indigo-600 text-[6px] flex items-center justify-center font-medium">
                 Live Demo
@@ -124,18 +137,22 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="absolute -top-6 left-1/3 h-10 w-10 rounded-xl bg-zinc-900/90 border border-zinc-800 flex items-center justify-center shadow-lg [transform:translateZ(80px)] animate-bounce [animation-duration:4s]">
-            <span className="text-sm">🎨</span>
-          </div>
-
-          <div className="absolute top-1/3 -right-6 h-10 w-10 rounded-xl bg-zinc-900/90 border border-zinc-800 flex items-center justify-center shadow-lg [transform:translateZ(60px)] animate-bounce [animation-duration:3.5s]">
-            <span className="text-sm text-cyan-400 animate-spin [animation-duration:8s]">
-              ⚛️
+          <div className="absolute -top-6 left-1/3 h-10 w-10 rounded-xl bg-zinc-900/90 border border-zinc-800 flex items-center justify-center shadow-lg transform-[translateZ(80px)] animate-bounce [animation-duration:4s]">
+            <span className="text-sm text-cyan-400">
+              <RiTailwindCssFill />
             </span>
           </div>
 
-          <div className="absolute -bottom-4 left-1/4 h-10 w-10 rounded-xl bg-zinc-900/90 border border-zinc-800 flex items-center justify-center shadow-lg [transform:translateZ(90px)] animate-bounce [animation-duration:4.5s]">
-            <span className="text-sm font-bold text-yellow-400">JS</span>
+          <div className="absolute top-1/3 -right-6 h-10 w-10 rounded-xl bg-zinc-900/90 border border-zinc-800 flex items-center justify-center shadow-lg transform-[translateZ(60px)] animate-bounce [animation-duration:3.5s]">
+            <span className="text-sm text-cyan-400 animate-spin [animation-duration:8s]">
+              <FaReact />
+            </span>
+          </div>
+
+          <div className="absolute -bottom-12 left-1/4 h-10 w-10 rounded-xl bg-zinc-900/90 border border-zinc-800 flex items-center justify-center shadow-lg transform-[translateZ(90px)] animate-bounce [animation-duration:4.5s]">
+            <span className="text-sm font-bold text-cyan-600  bg-white">
+              <BsTypescript />
+            </span>
           </div>
         </div>
       </div>

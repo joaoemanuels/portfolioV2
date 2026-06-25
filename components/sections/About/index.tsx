@@ -1,31 +1,43 @@
 "use client";
 
-import React from "react";
+import {
+  BriefcaseBusiness,
+  CircleCheckBig,
+  FolderBookmark,
+  MoveRight,
+  Pin,
+} from "lucide-react";
 
 const stats = [
   {
     id: 1,
     value: "1+",
     label: "Anos de experiência",
-    icon: "💼",
+    icon: <BriefcaseBusiness />,
   },
   {
     id: 2,
     value: "15+",
     label: "projetos completos",
-    icon: "📊",
+    icon: <CircleCheckBig />,
+  },
+  {
+    id: 3,
+    value: "15+",
+    label: "projetos completos",
+    icon: <FolderBookmark />,
   },
   {
     id: 4,
     value: "100%",
     label: "Commitment",
-    icon: "⚡",
+    icon: <Pin />,
   },
 ];
 
 export function About() {
   return (
-    <div className="w-full max-w-7xl mx-auto px-6 py-20 lg:py-32 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 items-center">
+    <div className="w-full max-w-7xl mx-auto px-6 py-20 lg:py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 items-center">
       <div className="relative aspect-square w-full max-w-90 mx-auto bg-[#B4A5FF] rounded-2xl overflow-hidden shadow-xl">
         <div className="absolute inset-0 flex items-end justify-center">
           <span className="text-sm text-purple-900/60 font-mono mb-4">
@@ -36,10 +48,10 @@ export function About() {
 
       <div className="flex flex-col items-start space-y-5">
         <span className="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">
-          About Me
+          Sobre mim
         </span>
 
-        <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-zinc-900 dark:text-white leading-tight">
+        <h2 className="text-3xl md:text-2xl font-bold tracking-tight text-zinc-900 dark:text-white leading-tight">
           Clean code. Pixel perfect.
           <br />
           Boas experiências.
@@ -58,7 +70,7 @@ export function About() {
         >
           Mais sobre mim
           <span className="transition-transform duration-200 group-hover:translate-x-1">
-            →
+            <MoveRight />
           </span>
         </a>
       </div>

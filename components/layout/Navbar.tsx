@@ -5,10 +5,10 @@ import { ThemeToggle } from "../ui/ThemeToggle";
 
 const navItems = [
   { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Projects", href: "#projects" },
+  { label: "Sobre Mim", href: "#about" },
+  { label: "Projetos", href: "#projects" },
   { label: "Skills", href: "#skills" },
-  { label: "Contact", href: "#contact" },
+  { label: "Contato", href: "#contact" },
 ];
 
 export function Navbar() {
@@ -41,10 +41,10 @@ export function Navbar() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
         <a href="#home" className="flex items-center gap-3 group">
           <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-linear-to-br from-indigo-500 to-purple-600 text-lg font-bold text-white shadow-md shadow-purple-500/20 transition-transform group-hover:scale-105">
-            DS
+            JE
           </div>
           <span className="font-semibold text-white tracking-wide">
-            Daniel Silva
+            João Emanuel
           </span>
         </a>
 

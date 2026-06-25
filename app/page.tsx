@@ -6,7 +6,7 @@ import { Skills } from "@/components/sections/Skills";
 
 export default function Home() {
   return (
-    <main className="flex flex-col w-full pt-16">
+    <main className="flex flex-col w-full">
       <section
         id="home"
         className="min-h-screen flex items-center justify-center"
@@ -16,28 +16,28 @@ export default function Home() {
 
       <section
         id="about"
-        className="min-h-screen flex items-center justify-center border-t border-zinc-200 dark:border-zinc-800"
+        className="flex items-center justify-center border-t border-zinc-200 dark:border-zinc-800"
       >
         <About />
       </section>
 
       <section
         id="projects"
-        className="min-h-screen flex items-center justify-center border-t border-zinc-200 dark:border-zinc-800"
+        className="flex items-center justify-center border-t border-zinc-200 dark:border-zinc-800"
       >
         <Projects />
       </section>
 
       <section
         id="skills"
-        className="min-h-screen flex items-center justify-center border-t border-zinc-200 dark:border-zinc-800"
+        className="flex items-center justify-center border-t border-zinc-200 dark:border-zinc-800"
       >
         <Skills />
       </section>
 
       <section
         id="contact"
-        className="min-h-screen flex items-center justify-center border-t border-zinc-200 dark:border-zinc-800"
+        className="flex items-center justify-center border-t border-zinc-200 dark:border-zinc-800"
       >
         <Contact />
       </section>
