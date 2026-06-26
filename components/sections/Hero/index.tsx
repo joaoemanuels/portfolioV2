@@ -1,8 +1,8 @@
 "use client";
 
 import { Download, MoveRight } from "lucide-react";
-import { HeroSocials } from "./HeroSocials";
 import { HeroMockup } from "./HeroMockup";
+import { HeroSocials } from "@/components/ui/SocialsSection";
 
 export function Hero() {
   return (
@@ -24,9 +24,9 @@ export function Hero() {
           Desenvolvedor front-end focado na criação de sites modernos,
           responsivos e fáceis de usar, utilizando{" "}
           <span className="text-indigo-400 font-medium">Next.js</span>,{" "}
-          <span className="text-indigo-400 font-medium">TypeScript</span>,{" "}
+          <span className="text-blue-800 font-medium">TypeScript</span>,{" "}
           <span className="text-purple-400 font-medium">React.js</span> e{" "}
-          <span className="text-purple-400 font-medium">Tailwind</span>.
+          <span className="text-violet-700 font-medium">Tailwind</span>.
         </p>
 
         <div className="flex flex-wrap gap-4 pt-4 w-full sm:w-auto">
@@ -51,7 +51,12 @@ export function Hero() {
           </a>
         </div>
 
-        <HeroSocials />
+        <div className="flex items-center gap-4 pt-8 border-t border-zinc-800/60 w-full">
+          <span className="text-xs font-medium text-zinc-500 uppercase tracking-wider">
+            Vamos nos conectar:
+          </span>
+          <HeroSocials />
+        </div>
       </div>
 
       <HeroMockup />

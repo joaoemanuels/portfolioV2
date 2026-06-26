@@ -1,11 +1,13 @@
 import { Badge } from "@/components/ui/Badge";
 import type { Project } from "@/types";
+import { MoveUpRight } from "lucide-react";
+import { FaGithub, FaStar } from "react-icons/fa";
 
 export function ModalHeader({ project }: { project: Project }) {
   return (
     <>
       <div className="flex items-center gap-2 px-2.5 py-1 rounded-md bg-purple-500/10 border border-purple-500/20 text-purple-400 text-xs font-semibold">
-        ⭐ Projeto em destaque
+        <FaStar className="text-amber-300" /> Projeto em destaque
       </div>
 
       <h3 className="text-2xl md:text-3xl font-bold tracking-tight text-white">
@@ -30,7 +32,7 @@ export function ModalHeader({ project }: { project: Project }) {
           rel="noreferrer"
           className="flex items-center gap-1.5 text-indigo-400 hover:text-indigo-300 transition-colors"
         >
-          Ver projeto ao vivo ↗
+          Ver projeto ao vivo <MoveUpRight />
         </a>
         <a
           href={project.githubUrl}
@@ -38,7 +40,7 @@ export function ModalHeader({ project }: { project: Project }) {
           rel="noreferrer"
           className="flex items-center gap-1.5 text-zinc-400 hover:text-white transition-colors"
         >
-          Ver código no GitHub 💻
+          Ver código no GitHub <FaGithub />
         </a>
       </div>
     </>

@@ -10,6 +10,7 @@ export interface Project {
   liveUrl: string;
   githubUrl: string;
   features?: string[];
+  function?: string;
   role?: string;
   duration?: string;
   results?: string;
@@ -18,5 +19,5 @@ export interface Project {
 export interface Skill {
   id: string;
   name: string;
-  icon: string; 
+  icon: string;
 }

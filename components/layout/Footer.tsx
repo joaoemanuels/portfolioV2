@@ -1,6 +1,7 @@
 "use client";
 
-import React from "react";
+import { ArrowUp } from "lucide-react";
+import { HeroSocials } from "../ui/SocialsSection";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -26,8 +27,8 @@ export function Footer() {
               </span>
             </div>
             <p className="text-xs leading-relaxed text-zinc-500 dark:text-zinc-400 max-w-60">
-              Front-end developer focused on building modern and responsive web
-              applications.
+              Desenvolvedor front-end focado na criação de aplicações web
+              modernas e responsivas.
             </p>
           </div>
 
@@ -51,13 +52,13 @@ export function Footer() {
 
           <div className="flex flex-col space-y-3">
             <span className="text-xs font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-200">
-              Services
+              Serviços
             </span>
             <ul className="space-y-2 text-xs text-zinc-500 dark:text-zinc-400">
               <li>Web Development</li>
-              <li>UI/UX Implementation</li>
-              <li>Responsive Design</li>
-              <li>Front-end Development</li>
+              <li>Implementação de UI/UX</li>
+              <li>Design Responsivo</li>
+              <li>Desenvolvimento de Front-end</li>
             </ul>
           </div>
 
@@ -65,19 +66,7 @@ export function Footer() {
             <span className="text-xs font-bold uppercase tracking-wider text-zinc-800 dark:text-zinc-200">
               Social
             </span>
-            <div className="flex gap-2">
-              {["github", "linkedin", "twitter", "mail"].map((social) => (
-                <a
-                  key={social}
-                  href={`#${social}`}
-                  className="flex h-8 w-8 items-center justify-center rounded-full border border-zinc-300 bg-white text-zinc-600 transition-all duration-200 hover:border-zinc-400 hover:text-zinc-900 dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-400 dark:hover:border-zinc-700 dark:hover:text-white"
-                >
-                  <span className="text-[10px] font-bold capitalize">
-                    {social[0]}
-                  </span>
-                </a>
-              ))}
-            </div>
+            <HeroSocials />
           </div>
         </div>
 
@@ -91,19 +80,7 @@ export function Footer() {
             className="flex h-8 w-8 items-center justify-center rounded-lg border border-zinc-300 bg-white text-zinc-600 transition-all duration-200 hover:bg-zinc-100 hover:text-zinc-900 dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-400 dark:hover:bg-zinc-900 dark:hover:text-white cursor-pointer"
             aria-label="Scroll to top"
           >
-            <svg
-              className="h-4 w-4"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2.5}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M5 10l7-7m0 0l7 7m-7-7v18"
-              />
-            </svg>
+            <ArrowUp />
           </button>
         </div>
       </div>

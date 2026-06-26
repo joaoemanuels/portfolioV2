@@ -8,7 +8,7 @@ export function Skills() {
     <div className="w-full max-w-7xl mx-auto px-6 py-20 lg:py-32 flex flex-col items-start">
       <div className="mb-10 space-y-2">
         <span className="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">
-          Skills & Tools
+          Skills e Ferramentas
         </span>
       </div>
 
